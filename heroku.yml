@@ -1,0 +1,8 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+  config:
+    SECRET:
+build:
+  docker:
+    web: Dockerfile
