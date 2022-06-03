@@ -5,8 +5,8 @@ COPY main.go .
 COPY go.sum .
 COPY go.mod .
 
-RUN ["go", "mod", "download"]
-RUN ["go", "build", "-o", "app-server"]
+RUN go mod download
+RUN go build -o app-server
 
 ARG PORT=80
 ENV PORT = $PORT
