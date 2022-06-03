@@ -8,7 +8,7 @@ COPY go.mod .
 RUN go mod download
 RUN go build -o app-server
 
-ARG PORT=80
+ARG PORT=8080
 ENV PORT = $PORT
 EXPOSE $PORT
 
